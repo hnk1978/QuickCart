@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { Chakra_Petch } from "next/font/google";
 
 let cached = global.mangoose
 if (!cached) {

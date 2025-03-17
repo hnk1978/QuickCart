@@ -1,7 +1,7 @@
 import { Inngest } from "inngest";
 import connectDB from "./db";
 import User from "@/models/User";
-import { envKeys } from "inngest/helpers/consts";
+
 
 // Create a client to send and receive events
 export const inngest = new Inngest({ id: "quickcart-next" });
@@ -49,7 +49,7 @@ export const syncUserUpdate = inngest.createFunction(
 // Inngest Function to delete user from database
 export const syncUserDeletion = inngest.createFunction(
     {
-        id: 'delet-user-with-clerk'
+        id: 'delete-user-with-clerk'
     },
     {
         event: 'clerk/user.deleted'
